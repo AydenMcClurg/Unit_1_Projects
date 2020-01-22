@@ -14,7 +14,18 @@
 
 */
 
+var thisDate = new Date();
+//takes the current date
+var dateString = thisDate.toLocaleDateString();
+//svaes the date givin by thisDate
+var dateHTML = "<h2>" + dateString + "</h2>";
+//places the date in the HTML
+var thisDay = thisDate.getDay();
+//gets the date of the week
 
+var eventHTML = getEvent(thisDay);
+document.getElementById("unionToday").insertAdjacentHTML("beforeend", dateHTML + eventHTML);
+//Union is selected and instered adjacently 
 
 function getEvent(day) {
    var eventHTML;
