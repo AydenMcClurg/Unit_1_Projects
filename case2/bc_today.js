@@ -1,4 +1,4 @@
-
+"use strict";
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 9
@@ -13,19 +13,22 @@
    student union.
 
 */
-
-var thisDate = new Date();
 //takes the current date
-var dateString = thisDate.toLocaleDateString();
-//svaes the date givin by thisDate
-var dateHTML = "<h2>" + dateString + "</h2>";
-//places the date in the HTML
-var thisDay = thisDate.getDay();
-//gets the date of the week
+var thisDate = new Date();
 
+//svaes the date givin by thisDate
+var dateString = thisDate.toLocaleDateString();
+
+//places the date in the HTML
+var dateHTML = "<h2>" + dateString + "</h2>";
+
+//gets the date of the week
+var thisDay = thisDate.getDay();
+
+//Union is selected and instered adjacently 
 var eventHTML = getEvent(thisDay);
 document.getElementById("unionToday").insertAdjacentHTML("beforeend", dateHTML + eventHTML);
-//Union is selected and instered adjacently 
+
 
 function getEvent(day) {
    var eventHTML;
